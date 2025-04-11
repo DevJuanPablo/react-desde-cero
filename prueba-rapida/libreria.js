@@ -1,16 +1,17 @@
-const header = document.createElement('header')
-const nav = document.createElement('nav')
-const ul = document.createElement('ul')
+function createElemento(elemento, atributos = {}, hijos = []) {
+  const elem = document.createElement(elemento)
 
-const link1 = document.createElement('li')
-const anchor1 = document.createElement('a')
-anchor1.innerHTML = 'Inicio'
+  let keys = Object.keys(atributos)
 
-const body = document.getElementById('root')
+  keys.map(key => elem.setAttribute(key, atributos[key]))
 
-body.appendChild(header)
-header.appendChild(nav)
-nav.appendChild(ul)
- //menu
-ul.appendChild(link1)
-link1.append(anchor1)
+  return elem
+}
+
+function render(contenido, elementoRaiz) {
+  let elemRaiz = document.getElementById(elementoRaiz)
+  elemRaiz.appendChild(contenido)
+}
+
+const Header = createElemento('header', {'id': 'mainHeader', 'class': 'main-header header'})
+render(Header, 'root')
