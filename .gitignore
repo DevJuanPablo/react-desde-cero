@@ -1,0 +1,24 @@
+# Logs
+/mi-segunda-app/logs
+/mi-segunda-app/*.log
+/mi-segunda-app/npm-debug.log*
+/mi-segunda-app/yarn-debug.log*
+/mi-segunda-app/yarn-error.log*
+/mi-segunda-app/pnpm-debug.log*
+/mi-segunda-app/lerna-debug.log*
+
+/mi-segunda-app/node_modules
+/mi-segunda-app/dist
+/mi-segunda-app/dist-ssr
+/mi-segunda-app/*.local
+
+# Editor directories and files
+/mi-segunda-app/.vscode/*
+/mi-segunda-app/!.vscode/extensions.json
+/mi-segunda-app/.idea
+/mi-segunda-app/.DS_Store
+/mi-segunda-app/*.suo
+/mi-segunda-app/*.ntvs*
+/mi-segunda-app/*.njsproj
+/mi-segunda-app/*.sln
+/mi-segunda-app/*.sw?
