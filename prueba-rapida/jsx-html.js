@@ -1,17 +1,13 @@
-const Article = () => {
+const Article = ({title, content, img}) => {
   return (
     <>
       <div id="myArticle" className="article-container">
-        <h1>Titulo del Articulo</h1>
-        <p>Lorem ipsum sit amet consectetur adipiscicin elit. autem architecto amet iure</p>
+        <h1>{title}</h1>
+        <p>{content}</p>
       </div>
       <div>
-        <img src="./img/imagen.jpg" alt="Imagen del Articulo" />
+        <img src={img} alt={title} />
       </div>
-      <form>
-        <label htmlFor="email">Email:</label>
-        <input onChange={() => {}} type="email" id="email" name="email" required />
-      </form>
     </>
   )
 }
