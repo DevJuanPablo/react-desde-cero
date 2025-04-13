@@ -1,14 +1,11 @@
+import Logo from "./Logo"
 import MainMenu from "./MainMenu"
 
 function Header() {
   return (
     <header>
-        <div>
-          <img src="logo.png" alt="Logo de la empres" />
-        </div>
-        <div>
-          <MainMenu />
-        </div>
+      <Logo />
+      <MainMenu />
     </header>
   )
 }
