@@ -1,5 +1,6 @@
-import Calculadora from "./components/Calculadora"
+// import Calculadora from "./components/Calculadora"
 import Header from "./components/header/Header"
+import Cuadricula from "./components/cursos/Cuadricula"
 
 function App(){
   return (
@@ -7,7 +8,7 @@ function App(){
       <Header />
       <main>
         <h1>Simple Calculadora</h1>
-        <Calculadora nombre='Formulario que suma' />
+        <Cuadricula />
       </main>
     </>
   )
