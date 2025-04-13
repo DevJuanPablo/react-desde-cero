@@ -22,3 +22,28 @@
 /mi-segunda-app/*.njsproj
 /mi-segunda-app/*.sln
 /mi-segunda-app/*.sw?
+
+# Logs
+/proyecto-del-curso/logs
+/proyecto-del-curso/*.log
+/proyecto-del-curso/npm-debug.log*
+/proyecto-del-curso/yarn-debug.log*
+/proyecto-del-curso/yarn-error.log*
+/proyecto-del-curso/pnpm-debug.log*
+/proyecto-del-curso/lerna-debug.log*
+
+/proyecto-del-curso/node_modules
+/proyecto-del-curso/dist
+/proyecto-del-curso/dist-ssr
+/proyecto-del-curso/*.local
+
+# Editor directories and files
+/proyecto-del-curso/.vscode/*
+/proyecto-del-curso/!.vscode/extensions.json
+/proyecto-del-curso/.idea
+/proyecto-del-curso/.DS_Store
+/proyecto-del-curso/*.suo
+/proyecto-del-curso/*.ntvs*
+/proyecto-del-curso/*.njsproj
+/proyecto-del-curso/*.sln
+/proyecto-del-curso/*.sw?
