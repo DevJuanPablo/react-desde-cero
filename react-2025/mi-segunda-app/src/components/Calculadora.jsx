@@ -8,6 +8,8 @@ const Calculadora = ({nombre}) => {
     numero2: 0
   })
 
+  const [texto, setTexto] = useState('')
+
   const setNumber = (e) => {
     setState({
       ...state,
@@ -36,6 +38,9 @@ const Calculadora = ({nombre}) => {
         <input type="submit" name="enviar" value="Sumar" />
       </form>
       <span>Resultado: {Number(state.numero1) + Number(state.numero2)}</span>
+      <input type="text" onChange={(e) => setTexto(e.target.value)} />
+      <span>{texto}</span>
+
     </>
   )
 }
