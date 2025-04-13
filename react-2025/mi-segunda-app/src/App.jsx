@@ -1,13 +1,13 @@
+import Calculadora from "./components/Calculadora"
 import Header from "./components/header/Header"
-import Cuadricula from "./components/cursos/Cuadricula"
 
 function App(){
   return (
     <>
       <Header />
       <main>
-        <h1>Cursos de EDteam</h1>
-        <Cuadricula />
+        <h1>Simple Calculadora</h1>
+        <Calculadora nombre='Formulario que suma' />
       </main>
     </>
   )
