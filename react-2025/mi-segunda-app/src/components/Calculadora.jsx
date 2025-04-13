@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Calculadora = ({nombre}) => {
 
@@ -9,6 +9,17 @@ const Calculadora = ({nombre}) => {
   })
 
   const [texto, setTexto] = useState('')
+
+  // se ejecuta cuando el componente va a ser montado
+  // el primer parametro es una funcion que se ejecuta cuando el componente se monta
+  // el segundo parametro es un array opcional, listado de todos los estados que quiero controlar como disparadores
+  useEffect(() => {
+    console.log(new Date().getTime())
+    return () => {
+      // aqui se ejecuta todo lo que quiero que pase cuando el componente se va a desmontar
+      console.log('El componente se va a desmontar')
+    }
+  }, [texto])
 
   const setNumber = (e) => {
     setState({
