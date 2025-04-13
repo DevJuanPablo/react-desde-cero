@@ -1,63 +1,43 @@
-import { Component } from "react";
+import { useState } from "react"
 
-class Calculadora extends Component {
+const Calculadora = ({nombre}) => {
 
   // PRIMER PASO DEL CICLO DE VIDA
-  constructor(props) {
-    super(props)
+  const [state, setState] = useState({
+    numero1: 0,
+    numero2: 0
+  })
 
-    // estado inicial del componente
-    this.state = {
-      numero1: 0,
-      numero2: 0
-    }
-
-    // binding de las funciones
-    this.setNumber = this.setNumber.bind(this)
-  }
-
-  setNumber(e) {
-    this.setState({
-      ...this.state,
+  const setNumber = (e) => {
+    setState({
+      ...state,
       [e.target.name]: e.target.value
     })
 
   }
 
   // SEGUNDO PASO DEL CICLO DE VIDA
-  render() {
-    return(
-      <>
-        <h2>{this.props.nombre}</h2>
-        <form>
-          <input 
-            type="number" 
-            name="numero1" 
-            value={this.state.numero1}
-            onChange={this.setNumber}
-          />
-          <input
-            type="number"
-            name="numero2"
-            value={this.state.numero2}
-            onChange={ this.setNumber }
-          />
-          <input type="submit" name="enviar" value="Sumar" />
-        </form>
-        <span>Resultado: { Number(this.state.numero1) + Number(this.state.numero2) }</span>
-      </>
-    )
-  }
-
-  // TERCER PASO DEL CICLO DE VIDA
-  componentDidMount() {
-    console.log('HOLA!')
-  }
-
-  // CUARTO PASO DEL CICLO DE VIDA
-  componentWillUnmount() {
-
-  }
+  return (
+    <>
+      <h2>{nombre}</h2>
+      <form>
+        <input
+          type="number"
+          name="numero1"
+          value={state.numero1}
+          onChange={setNumber}
+        />
+        <input
+          type="number"
+          name="numero2"
+          value={state.numero2}
+          onChange={setNumber}
+        />
+        <input type="submit" name="enviar" value="Sumar" />
+      </form>
+      <span>Resultado: {Number(state.numero1) + Number(state.numero2)}</span>
+    </>
+  )
 }
 
 export default Calculadora
