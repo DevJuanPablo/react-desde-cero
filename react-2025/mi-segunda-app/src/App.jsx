@@ -1,12 +1,12 @@
-import './App.css'
-
-const App = () => {
-
+function App(){
   return (
     <>
-      <div className='App'>
-        <h1>Mi segunda App</h1>
-      </div>
+      <header>
+        <span>Aquí irá el Menu</span>
+      </header>
+      <main>
+        <h1>Mi primer componente</h1>
+      </main>
     </>
   )
 }
