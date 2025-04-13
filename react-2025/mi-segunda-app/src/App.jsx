@@ -1,11 +1,13 @@
 import Header from "./Header"
+import Cuadricula from "./Cuadricula"
 
 function App(){
   return (
     <>
       <Header />
       <main>
-        <h1>Mi primer componente</h1>
+        <h1>Cursos de EDteam</h1>
+        <Cuadricula />
       </main>
     </>
   )
