@@ -1,5 +1,5 @@
-import Header from "./Header"
-import Cuadricula from "./Cuadricula"
+import Header from "./components/header/Header"
+import Cuadricula from "./components/cursos/Cuadricula"
 
 function App(){
   return (

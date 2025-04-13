@@ -1,5 +1,5 @@
 import Logo from "./Logo"
-import MainMenu from "./MainMenu"
+import MainMenu from "../menu/MainMenu"
 
 function Header() {
   return (
