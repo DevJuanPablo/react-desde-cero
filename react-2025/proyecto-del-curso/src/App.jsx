@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
-  const API_KEY = '21a08aa94f78667f28d58cb2c41cb7413eef3db9d6b5bff0e2be8eba03bc6dce'
+  const API_URL = import.meta.env.VITE_API_URL
+  const API_KEY = import.meta.env.VITE_API_KEY
 
   const [criptos, setCriptos] = useState()
   
   useEffect(() => {
-    fetch(`https://rest.coincap.io/v3/assets?limit=100`,
+    fetch(`${API_URL}assets?limit=100`,
       {headers: {Authorization: `Bearer ${API_KEY}`}}
     )
       .then((response) => response.json())
@@ -26,9 +27,11 @@ function App() {
     <>
       <h1>Lista de criptomonedas</h1>
       <ol>
-        { criptos.map( ({name, priceUsd}) => (
-          <li>Nombre: { name } Precio: {priceUsd}</li>
-        ))}
+        { 
+          criptos.map( ({id, name, priceUsd}) => (
+            <li key={id}>Nombre: { name } Precio: {priceUsd}</li>
+          ))
+        }
       </ol>
     </>
   )
