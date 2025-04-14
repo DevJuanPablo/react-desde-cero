@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function App() {
 
@@ -8,12 +9,11 @@ function App() {
   const [criptos, setCriptos] = useState()
   
   useEffect(() => {
-    fetch(`${API_URL}assets?limit=100`,
+    axios.get(`${API_URL}assets?limit=100`,
       {headers: {Authorization: `Bearer ${API_KEY}`}}
     )
-      .then((response) => response.json())
       .then((data) => {
-        setCriptos(data.data)
+        setCriptos(data.data.data)
       })
       .catch((error) => {
         console.error('Error fetching data:', error)  
